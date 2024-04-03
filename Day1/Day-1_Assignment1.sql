@@ -28,7 +28,7 @@ CREATE TABLE Cart (
     FOREIGN KEY (UserId) REFERENCES Users(UserId)
 );
 
-/* Creating the Cart table*/
+/* Creating the Orders table*/
 CREATE TABLE Orders (
     OrderId INT PRIMARY KEY,
     CartId INT NOT NULL,
