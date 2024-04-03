@@ -1,0 +1,10 @@
+A foreign key is a column or a group of columns in a relational database table that provides a link between data in two tables. It establishes a relationship between two tables by referencing the primary key or a unique key of another table.
+A foreign key relationship involves a parent table that holds the initial column values, and a child table with column values that reference the parent column values. A foreign key constraint is defined on the child table.
+A FK enforce relationships between tables, ensuring that data remains consistent and accurate.
+
+
+In MySQL, you can implement foreign keys using the FOREIGN KEY constraint when creating or altering tables.
+
+ALTER TABLE Dept
+ADD COLUMN empno INT,
+ADD CONSTRAINT fk_emps FOREIGN KEY (empno) REFERENCES Emps(empno);
