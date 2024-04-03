@@ -5,6 +5,23 @@ A FK enforce relationships between tables, ensuring that data remains consistent
 
 In MySQL, you can implement foreign keys using the FOREIGN KEY constraint when creating or altering tables.
 
+
+CREATE TABLE Dept(
+	deptno  INT PRIMARY KEY,
+    dname   VARCHAR(100) NOT NULL,
+    loc    VARCHAR(100)
+);
+
+
+CREATE TABLE Emps
+(
+	empno INT PRIMARY KEY,
+	ename VARCHAR(100),
+	job   VARCHAR(100),
+	salary   INT,
+	deptno INT
+);
+
 ALTER TABLE Dept
 ADD COLUMN empno INT,
 ADD CONSTRAINT fk_emps FOREIGN KEY (empno) REFERENCES Emps(empno);
