@@ -1,3 +1,4 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 What is View in MySql?
 In MySQL, a view is a virtual table that is created based on the result set of a SELECT query. It does not store any data on its own but rather it represents data from one or more underlying tables or views. Views can be used to simplify complex queries, provide a layer of abstraction over the database schema, and offer security by controlling access to certain columns or rows of data.
 
