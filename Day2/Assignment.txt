@@ -84,3 +84,61 @@ SYNTAX:  SELECT DISTINCT column1,column2,..A
 		 FROM table_name; */
 -- Example :SELECT distinct jobs from the table
 SELECT DISTINCT job FROM emps;
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/*Create  ProductsLogs table to store the following information. 
+		 Eg:	  Id, Operation, ProductId, ProductName,  Date, Time,  Message 
+		
+		Hint: Target the Products table. */
+CREATE TABLE ProductsLogs (
+    Id INT AUTO_INCREMENT PRIMARY KEY,
+    Operation VARCHAR(50),
+    ProductId INT,
+    ProductName VARCHAR(100),
+    Date DATE,
+    Time TIME,
+    Message VARCHAR(255)
+);
+
+CREATE TABLE Products (
+    ProductId INT AUTO_INCREMENT PRIMARY KEY,
+    ProductName VARCHAR(100),
+    Price DECIMAL(10,2)
+);
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+/*Create  a AFTER INSERT trigger operation  and  insert the corresponding details ProductsLogs table.*/
+DELIMITER //
+CREATE TRIGGER AfterProductInsert
+AFTER INSERT ON Products
+FOR EACH ROW
+BEGIN
+    INSERT INTO ProductsLogs (Operation, ProductId, ProductName, Date, Time, Message)
+    VALUES ('insert', NEW.ProductId, NEW.ProductName, CURDATE(), CURTIME(), 'New product added to inventory');
+END//
+DELIMITER ;
+Drop Trigger AfterProductInsert;
+-- Insert a new product into the Products table
+INSERT INTO Products (ProductName, Price)
+VALUES ('Test1', 99.99);
+
+SELECT * FROM ProductsLogs;
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/*Create  a AFTER DELETE trigger operation  and  insert the corresponding details ProductsLogs table with corresponding message.*/
+DELIMITER //
+CREATE TRIGGER AfterProductDelete
+AFTER DELETE ON Products
+FOR EACH ROW
+BEGIN
+    INSERT INTO ProductsLogs (Operation, ProductId, ProductName, Date, Time, Message)
+    VALUES ('delete', OLD.ProductId, OLD.ProductName, CURDATE(), CURTIME(), CONCAT('Product "', OLD.ProductName, '" removed from inventory'));
+END//
+DELIMITER ;
+
+-- Delete a product from the Products table
+DELETE FROM Products WHERE ProductName = 'Test1';
+
+SELECT * FROM ProductsLogs;
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
