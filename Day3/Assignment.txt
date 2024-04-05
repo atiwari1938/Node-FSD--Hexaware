@@ -1,0 +1,138 @@
+1.   Go through the node js fundamental documents that i shared. 
+2.   Study the Project Case Study and discuss with your project team member. 
+3.  Find some details about the following things about node:
+	a.   Find some more details about callbacks
+		In Node.js, callbacks are a fundamental concept used for asynchronous programming. They are functions passed as arguments to other functions, which are then invoked later 		when an operation completes or an event occurs. Callbacks are commonly used in Node.js for handling I/O operations, such as reading files, making network requests, or 			interacting with databases, where the results are not immediately available.
+
+	b.   Check the following methods in javascript where callbacks are involved:
+		a.  map()
+		b.  findIndex()
+		c.   find()
+		d. filter() 
+		
+		All the above methods are array where callbacks are commonly involved.
+		
+		a. map():
+			The map() method creates a new array by applying a callback function to each element of the original array.
+			The callback function provided to map() accepts three arguments: the current element being processed, the index of the current element, and the array on which map() 			was called.
+		b. findIndex():
+
+			The findIndex() method returns the index of the first element in the array that satisfies a provided testing function.
+			The callback function provided to findIndex() accepts three arguments: the current element being processed, the index of the current element, and the array on which 			findIndex() was called.
+			If no element satisfies the condition, -1 is returned.
+		c. find():
+
+			The find() method returns the value of the first element in the array that satisfies a provided testing function.
+			The callback function provided to find() accepts the same arguments as the callback for findIndex().
+			If no element satisfies the condition, undefined is returned.
+
+		d. filter():
+
+			The filter() method creates a new array with all elements that pass the test implemented by the provided callback function.
+			The callback function provided to filter() accepts the same arguments as the callbacks for map() and findIndex().
+	
+	c.   What kind of applications we can create using node js?
+		
+		Web Applications: Build server-side applications for serving web pages, handling HTTP requests, and interacting with databases.
+
+		APIs (Application Programming Interfaces): Create lightweight, scalable APIs to serve data and functionality to client applications.
+
+		Real-time Applications: Develop applications with bi-directional communication for chat, multiplayer games, live streaming, etc.
+
+		Microservices: Construct small, independent services that communicate over the network to create scalable architectures.
+
+		Command Line Tools: Build scripts and utilities for automating tasks, system administration, and managing workflows.
+
+		Desktop Applications: Utilize frameworks like Electron.js to build cross-platform desktop applications using web technologies.
+
+		IoT (Internet of Things): Develop applications for resource-constrained devices like Raspberry Pi and Arduino for home automation, smart devices, etc.
+
+		Streaming Applications: Process and manipulate data streams in real-time for multimedia streaming, data processing, and log aggregation.
+		
+
+	d.   Find out more details  about "Event Loops" in node js 
+
+		Event-Driven Architecture: Node.js employs an event-driven architecture for handling asynchronous I/O operations.
+
+		Single-Threaded and Non-Blocking: Node.js is single-threaded, but it uses a non-blocking event loop to handle I/O operations asynchronously.
+		
+		Event Loop Phases:
+
+			Timers: The event loop starts by processing timers scheduled with functions like setTimeout() and setInterval().
+			I/O Callbacks: Next, it processes I/O callbacks, such as the completion of file I/O or network requests.
+			Idle, Prepare: These phases are rarely used and are reserved for internal purposes.
+			Poll: In this phase, the event loop waits for new events to arrive. If there are no pending I/O operations, it will wait for new events or timers.
+			Check: This phase executes callbacks scheduled by setImmediate().
+			Close Callbacks: Callbacks registered with the close event are executed in this phase.
+			Timers: Any remaining timers that were scheduled during the previous phases are processed in this phase.
+
+		Microtask Queue: Handles promises and other asynchronous tasks with priority over other phases in the event loop.
+
+		Concurrency Model: Node.js achieves concurrency through event-driven programming, asynchronous APIs, and non-blocking I/O.
+
+		Libuv: Node.js's event loop is powered by the Libuv library, providing platform-independent asynchronous I/O operations and event handling.
+
+4.  What are differences between MySql and MongoDb? 
+
+MySQL and MongoDB are both popular database management systems, but they have several differences in their architectures, data models, query languages, and use cases. 
+
+1-Data Model:
+
+	MySQL: MySQL is a relational database management system (RDBMS) based on the SQL (Structured Query Language) model. It organizes data into tables with rows and columns, where 	relationships between tables are established using foreign keys.
+	MongoDB: MongoDB is a NoSQL database that uses a document-oriented data model. It stores data in flexible, JSON-like documents, allowing for nested data structures and dynamic 
+	schemas.
+
+2-Schema:
+
+	MySQL: MySQL databases typically have a fixed schema, where the structure of tables and columns is defined in advance. Any changes to the schema may require altering existing 	tables, which can involve downtime in some cases.
+	MongoDB: MongoDB databases have a dynamic schema, allowing documents in the same collection to have different fields and structures. This flexibility simplifies schema evolution 
+	and supports agile development.
+
+3-Query Language:
+
+	MySQL: MySQL uses SQL (Structured Query Language) for querying and manipulating data. SQL is a powerful and widely used language for working with relational databases.
+	MongoDB: MongoDB uses a query language similar to JavaScript called the MongoDB Query Language (MQL). MQL supports CRUD (Create, Read, Update, Delete) operations as well as 	aggregation, indexing, and other advanced features specific to document databases.
+
+4-Scalability:
+
+	MySQL: MySQL traditionally scales vertically, meaning that it's scaled up by adding more resources (CPU, memory, etc.) to a single server. It also supports some forms of horizontal 	scaling through techniques like replication and sharding.
+	MongoDB: MongoDB is designed for horizontal scalability from the ground up. It supports distributed architectures with features like sharding, allowing data to be distributed a	cross multiple servers to handle large volumes of traffic and data.
+
+5-Data Integrity:
+
+	MySQL: MySQL enforces ACID (Atomicity, Consistency, Isolation, Durability) properties, ensuring data integrity and consistency.
+	MongoDB: MongoDB sacrifices some ACID properties (like consistency) for performance and scalability. However, it offers tunable consistency levels to balance consistency and 	performance based on application requirements.
+
+6-Use Cases:
+
+	MySQL: MySQL is well-suited for applications requiring complex queries, transactions, and strict data integrity, such as e-commerce platforms, financial applications, and 	traditional relational database use cases.
+	MongoDB: MongoDB is ideal for applications with flexible schemas, high volumes of data, and requirements for fast iteration and scalability, such as content management systems, 	real-time analytics, and IoT (Internet of Things) applications. 
+
+
+5.  What is "let"  keyword in javascript? Diff. between  "var" and "left" keyword?
+
+In JavaScript, let is a keyword introduced in ECMAScript 6 (ES6) for declaring variables. It allows developers to declare block-scoped variables, which means that variables declared with let are limited in scope to the block, statement, or expression in which they are defined.
+
+The key differences between var and let:
+
+1-Scope:
+
+	var: Variables declared with var are function-scoped or globally scoped. This means that their scope extends throughout the entire function in which they are declared, or globally 	if declared outside of any function.
+	let: Variables declared with let are block-scoped. They are only accessible within the block (enclosed by curly braces) in which they are defined, such as a loop or an if statement 	block.
+
+2-Hoisting:
+
+	var: Variables declared with var are hoisted to the top of their containing function or global scope. This means that they are accessible throughout the function even before the 	point at which they are declared, but their values are initialized with undefined until they are actually assigned a value.
+	let: Variables declared with let are also hoisted, but they are not initialized until the point of the block where they are declared. Accessing a let variable before its 	declaration (within the same block) results in a ReferenceError.
+
+5-Re-declaration:
+
+	var: Allows re-declaration of variables within the same scope, potentially leading to unintended consequences or bugs.
+	let: Does not allow re-declaration of variables within the same block scope. Attempting to redeclare a variable with let in the same block scope results in a SyntaxError.
+
+6-Use Cases:
+
+	var: Historically used for variable declaration in JavaScript. Still relevant for backward compatibility and in cases where function-scoping behavior is desired.
+	let: Preferred for declaring variables when block scoping is desired, providing better control over variable scope and reducing potential issues related to hoisting and unintended 	re-declaration.
+			
+								

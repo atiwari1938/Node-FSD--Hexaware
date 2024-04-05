@@ -1,0 +1,17 @@
+What is package.json?
+
+package.json is a file used in Node.js projects to manage dependencies, scripts, and metadata related to the project. It is a JSON (JavaScript Object Notation) file that typically resides in the root directory of a Node.js project.
+
+What is the significance of package.json in node projects?
+
+Dependency Management: It specifies project dependencies, ensuring consistency and ease of installation across different environments.
+
+Version Control: Helps maintain consistency by specifying exact version numbers or version ranges for dependencies.
+
+Script Execution: Enables the execution of custom scripts for various tasks, automating common development processes.
+
+Metadata: Contains essential project metadata like name, version, author, and license, aiding in project understanding and management.
+
+Configuration Settings: Allows for the configuration of tools and libraries used in the project to tailor them to specific requirements.
+
+NPM/Yarn Integration: Integrates seamlessly with package managers like npm and Yarn, facilitating dependency installation and project management.
