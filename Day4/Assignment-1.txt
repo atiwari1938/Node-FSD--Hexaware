@@ -1,0 +1,28 @@
+What is Regular expression in JavaScript?
+A regular expression is a sequence of characters that forms a search pattern.
+When you search for data in a text, you can use this search pattern to describe what you are searching for.
+A regular expression can be a single character, or a more complicated pattern.
+Regular expressions can be used to perform all types of text search and text replace operations.
+
+Syntax
+/pattern/modifiers;
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+How to use Regular Expressions in JavaScript?
+Using a regular expression literal, which consists of a pattern enclosed between slashes, as follows:
+
+const re = /ab+c/;
+Regular expression literals provide compilation of the regular expression when the script is loaded. If the regular expression remains constant, using this can improve performance.
+Or calling the constructor function of the RegExp object, as follows:
+const re = new RegExp("ab+c");
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Go through the details of  javascript array methods :  
+				map, find, findindex, filter
+
+map(): The map() method creates a new array by applying a function to each element in the original array.
+
+find(): The find() method returns the first element in the array that satisfies the provided testing function. Otherwise, it returns undefined.
+
+findIndex(): The findIndex() method returns the index of the first element in the array that satisfies the provided testing function. Otherwise, it returns -1.
+
+filter(): The filter() method creates a new array with all elements that pass the test implemented by the provided function.
