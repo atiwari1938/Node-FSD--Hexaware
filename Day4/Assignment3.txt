@@ -1,0 +1,17 @@
+a. How to extract only values from the object?
+We use the Object.values() method in JavaScript to extract only the values from an object. 
+Example:
+const obj = { id: 1, pname: 'candy', price: 10, qty: 5, category: 'Category A' };
+
+const values = Object.values(obj);
+console.log(values); 
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+b. How to clone the object?
+There are multiple ways to clone an object in JavaScript. One of the simplest ways is to use the spread operator (...) or Object.assign() method. 
+Example:
+const originalObj = { id: 1, pname: 'candy', price: 10, qty: 5, category: 'Category A' };
+
+// Clone using spread operator
+const clonedObj = { ...originalObj };
+
+console.log(clonedObj); 
