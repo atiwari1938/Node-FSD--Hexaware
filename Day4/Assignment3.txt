@@ -15,3 +15,8 @@ const originalObj = { id: 1, pname: 'candy', price: 10, qty: 5, category: 'Categ
 const clonedObj = { ...originalObj };
 
 console.log(clonedObj); 
+
+// Clone using Object.assign()
+const clonedObj = Object.assign({}, originalObj);
+
+console.log(clonedObj); 
