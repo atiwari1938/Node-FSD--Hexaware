@@ -1,0 +1,30 @@
+const regex = /^[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}$/;
+
+const registrationNumber = "UK03CA5653"; 
+
+if (regex.test(registrationNumber)) {
+    console.log("Valid Indian vehicle registration number.");
+} else {
+    console.log("Invalid Indian vehicle registration number.");
+}
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What are data structure?
+
+Data structures are fundamental concepts in computer science that define the way data is organized and stored in a computer's memory. They provide a systematic way of managing and manipulating data efficiently, allowing programmers to perform various operations such as insertion, deletion, searching, and sorting effectively.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Need of data structure?
+Data structures are essential tools for organizing, managing, and manipulating data effectively in computer programs. They play a crucial role in optimizing performance, memory usage, and code readability, ultimately leading to the development of efficient and scalable software systems.
+
+Organization: Data structures organize and structure data in a meaningful way.
+Efficiency: They enable efficient access, manipulation, and retrieval of data.
+Memory Management: Data structures help in managing memory efficiently, optimizing memory usage and reducing fragmentation.
+Algorithm Implementation: Many algorithms rely on specific data structures for efficient implementation.
+Code Reusability: They promote code reusability and modularity by providing reusable components.
+Performance Optimization: Choosing the right data structure can drastically improve program performance.
+Problem Solving: Data structures provide a framework for solving complex problems efficiently.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+What are the applications of stack and queue in real-time applications?
+Stacks and queues are fundamental data structures used in various real-time applications due to their specific characteristics and properties. 
