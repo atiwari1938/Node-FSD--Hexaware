@@ -28,3 +28,13 @@ Problem Solving: Data structures provide a framework for solving complex problem
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 What are the applications of stack and queue in real-time applications?
 Stacks and queues are fundamental data structures used in various real-time applications due to their specific characteristics and properties. 
+Real-Time Examples of Stacks:
+Undo Feature in Text Editors: When you're typing a document in a text editor like Microsoft Word or Google Docs, the undo feature allows you to reverse your recent actions. Each action you perform (typing, deleting, formatting, etc.) is added to a stack. When you press "Undo," the most recent action is undone by popping it off the stack.
+Browser History: Web browsers like Google Chrome or Mozilla Firefox maintain a history of visited web pages. As you navigate from one page to another, each page you visit is added to a stack. When you press the "Back" button, the browser goes back to the previous page by popping it off the stack.
+Call Stack in Programming: When you call functions in a program, each function call and its corresponding variables are added to the call stack. For example, in JavaScript, when you call a function, it gets pushed onto the call stack. When the function returns, it gets popped off the stack.
+
+Real-Time Examples of Queues:
+
+Printer Queue: When multiple users send print jobs to a printer, the print jobs are queued up in a first-come-first-served manner. Each print job is added to the end of the queue and processed in the order it was received.
+Customer Support Call Center: In a call center, incoming customer calls are queued up in a waiting line. When a customer service representative becomes available, they take the next call from the front of the queue. This ensures fairness and efficiency in handling customer inquiries.
+Ticket Counter at Movie Theaters or Theme Parks: When people line up to buy tickets at movie theaters or theme parks, they form a queue. Each person joins the end of the queue and waits for their turn to purchase tickets. The tickets are sold in the order people joined the queue.
