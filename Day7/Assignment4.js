@@ -3,7 +3,8 @@ const axios = require('axios');
 async function getCustomerByCountry(country) {
   try {
     const response = await axios.get('https://www.w3schools.com/angular/customers.php');
-    const customers = response.data.records.filter(customer => customer.Country === country);
+    const customerarr=response.data.records;
+    const customers = customerarr.filter(customer => customer.Country === country);
     return customers;
   } catch (error) {
     console.error('Error fetching customer data:', error.message);
