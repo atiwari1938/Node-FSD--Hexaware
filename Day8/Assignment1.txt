@@ -1,0 +1,46 @@
+Relative Path:
+•	A relative path specifies the location of a file or directory relative to the current working directory or another specified directory.
+•	It does not include the root directory or any drive letter.
+•	Relative paths are typically used when referencing files or directories within the same directory structure or in a predictable location relative to the current location.
+Absolute Path:
+•	An absolute path specifies the exact location of a file or directory from the root directory of the file system.
+•	It includes the root directory (such as / in Unix-like systems or C:\ in Windows) and all directories leading to the target file or directory.
+•	Absolute paths provide a complete and unambiguous reference to a file or directory, regardless of the current working directory.
+Physical Path:
+•	A physical path refers to the actual physical location of a file or directory on a storage device, such as a hard drive or SSD.
+•	It represents the precise location of a file or directory in the file system hierarchy, including all directories and subdirectories leading to the target location.
+•	Physical paths are often used when interacting with the file system at a low level, such as when performing file operations or managing file paths programmatically.
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In Node.js, __filename and __dirname are special variables that provide information about the current file and directory paths, respectively.
+
+__filename:
+
+•	__filename is a global variable that contains the absolute path of the currently executing script file.
+•	It represents the full path to the current file, including the file name and extension.
+•	It can be useful for accessing or manipulating the current file's path programmatically.
+
+console.log(__filename); // Prints the absolute path of the current file
+
+__dirname:
+
+•	__dirname is a global variable that contains the absolute path of the directory containing the currently executing script file.
+•	It represents the full path to the directory of the current file, excluding the file name.
+•	It can be useful for accessing files relative to the current file's directory or for dynamically constructing file paths.
+
+console.log(__dirname); // Prints the absolute path of the directory containing the current file
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+JSON.stringify():
+
+The JSON.stringify() method converts a JavaScript object or value to a JSON string.
+•	Syntax: JSON.stringify(value[, replacer[, space]])
+•	value: The JavaScript object or value to be converted to a JSON string.
+•	replacer (optional): A function that transforms the results or an array of properties to include in the output.
+•	space (optional): A string or number indicating the indentation level for prettifying the output JSON string.
+JSON.parse():
+
+The JSON.parse() method parses a JSON string and converts it into a JavaScript object or value.
+•	Syntax: JSON.parse(text[, reviver])
+•	text: The JSON string to be parsed into a JavaScript object.
+•	reviver (optional): A function that can transform the resulting object, or an array of properties to include in the output.
