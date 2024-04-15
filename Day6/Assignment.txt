@@ -1,0 +1,26 @@
+what is the event loop in node js?
+In Node.js, the event loop is a crucial concept that enables non-blocking I/O operations. 
+It's responsible for handling asynchronous operations, such as reading files from disk, making HTTP requests, or waiting for database queries to complete, without blocking the execution of other code.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+what are promises in javascript?
+Promises in JavaScript are a mechanism for handling asynchronous operations.
+They provide a way to manage asynchronous code in a more structured and readable manner compared to using callbacks directly.
+Promises represent the eventual completion or failure of an asynchronous operation and allow you to chain multiple asynchronous operations together in a more intuitive way.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+why do we use promises?
+Asynchronous Operations: Promises provide a structured way to handle asynchronous operations, making it easier to work with code that doesn't execute in a linear fashion.
+Readability: They improve code readability by allowing developers to write asynchronous code that looks and behaves more like synchronous code.
+Error Handling: Promises offer built-in error handling mechanisms, simplifying error handling logic and reducing the likelihood of uncaught exceptions.
+Chaining: They support method chaining, enabling developers to chain multiple asynchronous operations together in a sequential and intuitive manner.
+Composition: Promises can be composed together using functions like Promise.all() and Promise.race(), allowing developers to aggregate multiple promises or race them against each other.
+Concurrency Control: Promises provide a mechanism for controlling the flow of execution in asynchronous code, helping manage concurrency and ensure tasks are executed in the desired order.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+what is significance of asyn and await keywords?
+
+The async and await keywords in JavaScript are used to simplify asynchronous code and make it look more synchronous, improving readability and maintainability.
+They were introduced in ECMAScript 2017 (ES8) and have become widely adopted due to their benefits in handling asynchronous operations.
+Asynchronous Code Simplification
+Error Handling
+Implicit Promise Handling
+Sequential Execution
+Concurrency Control
