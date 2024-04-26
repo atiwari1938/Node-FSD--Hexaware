@@ -1,0 +1,27 @@
+<html >
+<head>
+    <title>Employee List</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Employee List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% employees.forEach(employee => { %>
+                <tr>
+                    <td><%= employee.id %></td>
+                    <td><%= employee.name %></td>
+                    <td><%= employee.department_id %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
