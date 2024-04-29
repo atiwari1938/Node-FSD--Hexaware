@@ -1,14 +1,14 @@
-// index.js
+
 
 const express = require('express');
 const vehicleRoutes = require('./routes/vehicleroutes');
 
 const app = express();
 
-// Parse JSON bodies
+
 app.use(express.json());
 
-// Define vehicle routes
+// vehicle routes
 app.use('/vehicles', vehicleRoutes);
 
 // Start the server
