@@ -1,4 +1,3 @@
-// vehicleController.js
 
 const { validationResult } = require('express-validator');
 
