@@ -1,0 +1,113 @@
+<!--
+    Create a web page to prepare some Q & A web page. 
+	Hints:
+	a. Questions should be red color
+	b. Answers should be in blue color
+	c.  Try to add some 10 questions
+-->
+
+<!DOCTYPE html>
+<html >
+<head>
+<title>Q1</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+  }
+  .question {
+    color: red;
+    font-weight: bold;
+  }
+  .answer {
+    color: blue;
+  }
+  h1{
+    text-align  : center;
+  }
+</style>
+</head>
+<body>
+
+<h1>Q&A Web Page</h1>
+
+<div class="question">
+  <p>Q1: What is HTML?</p>
+</div>
+<div class="answer">
+  <p>A1: HTML stands for HyperText Markup Language. It is the standard markup language for creating web pages.</p>
+</div>
+
+<div class="question">
+  <p>Q2: What is CSS?</p>
+</div>
+<div class="answer">
+  <p>A2: CSS stands for Cascading Style Sheets. It is used to style the appearance of HTML elements on web pages.</p>
+</div>
+
+<div class="question">
+  <p>Q3: What is JavaScript?</p>
+</div>
+<div class="answer">
+  <p>A3: JavaScript is a programming language that enables interactive web pages. It is used for client-side scripting, such as validating forms and creating dynamic content.</p>
+</div>
+
+<div class="question">
+  <p>Q4: What is the difference between margin and padding?</p>
+</div>
+<div class="answer">
+  <p>A4: Margin is the space outside the border of an element, while padding is the space inside the border of an element.</p>
+</div>
+
+<div class="question">
+  <p>Q5: What is a responsive web design?</p>
+</div>
+<div class="answer">
+  <p>A5: Responsive web design is an approach to design and development that ensures web pages look good and function properly on various devices and screen sizes.</p>
+</div>
+<div class="question">
+    <p>Q6: What is Express.js?</p>
+  </div>
+  <div class="answer">
+    <p>A6: Express.js is a web application framework for Node.js. It is designed for building web applications and APIs quickly and easily.</p>
+  </div>
+  
+  <div class="question">
+    <p>Q7: What are the main features of Express.js?</p>
+  </div>
+  <div class="answer">
+    <p>A7: Some of the main features of Express.js include routing, middleware support, template engines, and error handling.</p>
+  </div>
+  
+  <div class="question">
+    <p>Q8: How do you install Express.js?</p>
+  </div>
+  <div class="answer">
+    <p>A8: Express.js can be installed via npm (Node Package Manager) using the command: <code>npm install express</code>.</p>
+  </div>
+  
+  <div class="question">
+    <p>Q9: How do you create a basic server with Express.js?</p>
+  </div>
+  <div class="answer">
+    <p>A9: To create a basic server with Express.js, you can use the following code:
+    <pre><code>const express = require('express');
+  const app = express();
+  
+  app.get('/', (req, res) => {
+    res.send('Hello, World!');
+  });
+  
+  app.listen(3000, () => {
+    console.log('Server is running on port 3000');
+  });</code></pre></p>
+  </div>
+  
+  <div class="question">
+    <p>Q10: What is routing in Express.js?</p>
+  </div>
+  <div class="answer">
+    <p>A10: Routing in Express.js refers to determining how an application responds to a client request to a particular endpoint (URI) and HTTP method (GET, POST, etc.).</p>
+  </div>
+
+</body>
+</html>
